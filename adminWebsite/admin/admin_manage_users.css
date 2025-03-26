@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    max-width: 400px;
+}
+
+.container input, 
+.container select {
+    display: block;  /* Ensures elements take up full width */
+    width: calc(100% - 4px);  /* Adjust width to match both */
+    margin: 14px 0;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    height: 48px;
+    box-sizing: border-box;  /* Ensures padding doesn't affect width */
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+input, select, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+}
+
+button {
+    background: linear-gradient(90deg, #ff512f, #dd2476);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(255, 81, 47, 0.3);
+}
+
+/* Style for the list container */
+ul {
+    list-style: none;
+    padding: 0;
+    height: 240px; /* Height for showing 4 items */
+    overflow-y: auto; /* Enables vertical scrolling */
+    scrollbar-width: none; /* Hide the scrollbar in Firefox */
+    -ms-overflow-style: none;  /* Hide the scrollbar in Internet Explorer and Edge */
+}
+
+/* For Webkit browsers (Chrome, Safari) */
+ul::-webkit-scrollbar {
+    display: none; /* Hide the scrollbar */
+}
+
+li {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.3s ease;
+    cursor: pointer;
+    /* Ensuring equal box size */
+    height: 80px; /* Adjust height */
+    width: 100%; /* Full width to align */
+    box-sizing: border-box; /* Ensures padding is included in the total width */
+}
+
+.remove-btn {
+    background-color: #ff4444;
+    color: white;
+    border: none;
+    padding: 10px 0; /* Adjusted padding for more height */
+    width: 120px; /* Set a fixed width for uniformity */
+    height: 50px; /* Increased height for the button */
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center; /* Center the text inside */
+}
+
+.remove-btn:hover {
+    background-color: #ff2222;
+}
+
+.back-button {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: white;
+    padding: 12px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    transition: all 0.3s;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
