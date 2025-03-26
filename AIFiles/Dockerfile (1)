@@ -1,0 +1,17 @@
+FROM python:3.9 
+
+WORKDIR /app
+
+# ✅ Set Hugging Face Cache to /tmp
+ENV HF_HOME=/tmp/huggingface
+ENV TRANSFORMERS_CACHE=/tmp/huggingface
+ENV HF_HUB_CACHE=/tmp/huggingface
+
+# ✅ Install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install --no-cache-dir accelerate scipy huggingface_hub
+
+COPY . .
+
+CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7860"]
