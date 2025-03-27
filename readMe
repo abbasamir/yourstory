@@ -88,7 +88,8 @@ Technology Stack
 Prerequisites
 - Flutter setup installed & completed
 - Android Studio is installed
-- HuggingFace API is running on GPU (Follow instructions above)
+- You may skip the above steps and directly download 'YourStory.apk' on an Android device to experience the app.
+- HuggingFace API is running on GPU (Follow instructions above) - IMPORTANT
 
 ### Steps to Install
 1. Clone the repository:
@@ -99,7 +100,7 @@ Prerequisites
 
 or 
 
-use can visit https://github.com/abbasamir/yourstory/tree/main/app and download the zip file directly
+You can visit https://github.com/abbasamir/yourstory/tree/main/app and download the zip file directly
 
    
 2. Install dependencies:
