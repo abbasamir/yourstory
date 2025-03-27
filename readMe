@@ -1,1 +1,145 @@
-This is a readMe file that tells you on how to run the app
+YourStory App
+
+Overview
+YourStory is an interactive storytelling app designed for kids. It provides engaging, AI-generated stories tailored to a child’s preferences and reading level.
+The app tracks a child's reading progress and performance over the past seven days, including the number of stories completed and total time spent reading. 
+Parents can monitor their child's engagement and growth through an intuitive dashboard. The app integrates Firebase for data storage and management.
+
+The app also generates quiz questions based on the story content to assess comprehension. 
+Using an AI model trained with GPT-2, it formulates questions, provides answer options, and highlights the correct answer. 
+The dataset consists of long sentences, with additional columns for questions, correct answers, and four answer options. 
+
+Features
+AI-Powered Story Generation
+- Utilizes trained GPT-2 models to generate rich, interactive stories.
+- Fetches themes from Firebase to align stories with children's interests.
+- Ensures coherence and logical progression in narratives.
+
+Question & Quiz Generation
+- The AI model generates quizzes based on the story's content.
+- Ensures each question has exactly four answer options.
+- Helps assess reading comprehension and engagement.
+
+User Accounts & Authentication
+- Secure authentication using Firebase Authentication.
+- Parents can create accounts and manage multiple child profiles.
+- Children access stories via their respective profiles.
+
+Reading Progress Tracking
+- Tracks the number of stories completed by each child in the past 7 days.
+- Logs total time spent reading.
+- Provides insights for parents to understand reading habits.
+- Displays student performance data based on past engagement.
+
+Story Storage & Retrieval
+- Uses Firestore Database to store and retrieve stories.
+- Stories are saved under each child’s unique identifier (e.g., `child_1`, `child_2`).
+- Parents can review previously read stories.
+
+Performance Analytics
+- Encourages consistent reading habits through progress tracking.
+- Uses Firebase to fetch and analyze student performance based on the last 7 days.
+
+Hugging Face Model Setup (IMPORTANT)
+To generate AI-powered stories, you need to start the Hugging Face model manually:
+1. Open the following link: https://huggingface.co/spaces/abdalraheemdmd/story-image-api/tree/main
+2. Log in to Hugging Face with your credentials.
+
+HuggingFace Credentials:
+email: abdalraheemdmd@gmail.com
+password: Saba@5858 ('S' is capital)
+
+3. Go to Settings and select "Nvidia T4 medium" under the hardware section.
+4. Wait a few minutes for the model to load.
+5. Once the model is running, you can generate stories within the app.
+
+Firebase Structure
+The app leverages Firestore to organize data efficiently. Below is an overview of the database structure:
+
+`parents` Collection
+Each parent document is identified by a unique user ID (UID).
+
+Parent Document Fields:
+```json
+{
+  "name": "Parent Name",
+  "email": "parent@example.com",
+  "children": {
+    "child_1": { "name": "Alice", "age": 6 },
+    "child_2": { "name": "Bob", "age": 8 }
+  }
+}
+```
+
+`children` Collection (Nested under `parents`)
+Each child has a document containing their reading history and quiz performance.
+
+
+Technology Stack
+- Frontend: Flutter (for mobile application development)
+- Backend: Firebase Functions (for business logic execution, if needed)
+- Database: Firebase Firestore (for storing users, stories, and performance data)
+- Authentication: Firebase Authentication (for secure user management)
+- AI Model:
+  - GPT-2 for story generation
+  - Custom-trained GPT-2 model for generating quiz questions based on stories
+
+## Installation & Setup
+Prerequisites
+- Flutter setup installed & completed
+- Android Studio is installed
+- HuggingFace API is running on GPU (Follow instructions above)
+
+### Steps to Install
+1. Clone the repository:
+   sh
+   git clone https://github.com/abbasamir/yourstory.git
+   cd yourstory
+   cd app
+
+or 
+
+use can visit https://github.com/abbasamir/yourstory/tree/main/app and download the zip file directly
+
+   
+2. Install dependencies:
+   sh
+   flutter pub get
+   
+3. Configure HuggingFace API by following the Hugging Face Model Setup section above
+
+4. Run the application:
+   flutter run
+
+
+#Demo Account
+
+Parents/Child Account
+Email: aa348@uowmail.edu.au
+Password: 12345678
+Select 'Sara' child for a better experience, as it has dummy data. 
+
+Teachers Account
+Email: abbasamir179@gmail.com
+Password: 12345678
+
+## Usage
+1. Sign Up/Login: Parents sign up and create child profiles.
+2. Start Hugging Face Model: Follow the Hugging Face Model Setup instructions above.
+3. Select a Story: The Child generates a story.
+4. Read & Track: Stories are read, and time spent is logged.
+5. Take a Quiz: Children answer story-related questions to test comprehension.
+6. Review Progress: Parents can track reading performance over time, including quiz scores.
+
+## Future Enhancements
+- Personalized AI Recommendations: Suggest stories based on past reading patterns.
+- Gamification: Rewards, badges, and a leaderboard to encourage reading.
+- Offline Mode: Download stories for offline reading.
+
+
+## Contact
+For inquiries, support, or contributions, please contact:
+- Email: yourstorycsit321@gmail.com
+- GitHub: https://github.com/abbasamir/yourstory.git
+- Instagram: @yourstory_edu
+
