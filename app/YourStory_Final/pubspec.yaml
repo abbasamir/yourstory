@@ -1,0 +1,163 @@
+name: yourstory
+description: "Interactive Storytelling App"
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.5.3
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.6
+  cloud_firestore: ^5.0.0
+  provider: ^6.1.2
+  flutter_tts: ^3.2.2
+  lottie: ^2.3.2
+  flutter_inappwebview: ^6.1.5
+  fl_chart: ^0.70.2
+  intl: ^0.18.0
+
+
+  # The following adds the Cupertino Icons font to your application.
+  # Use with the CupertinoIcons class for iOS style icons.
+  cupertino_icons: ^1.0.8
+  firebase_core: ^3.7.0
+  firebase_auth: ^5.3.2
+  auto_size_text: ^3.0.0
+  flutter_lints: ^4.0.0
+  firebase_storage:
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/app_icon.png"  # Path to your app icon
+ #adaptive_icon_foreground: "assets/app_icon_foreground.png" # For Android adaptive icons
+
+
+
+# For information on the generic Dart part of this file, see the
+# following page: https://dart.dev/tools/pub/pubspec
+
+# The following section is specific to Flutter packages.
+flutter:
+
+  # The following line ensures that the Material Icons font is
+  # included with your application, so that you can use the icons in
+  # the material Icons class.
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/app_logo.png
+    - assets/logo.png
+    - assets/background.png
+    - assets/character_image.png
+    - assets/story_image1.png
+    - assets/rabbit_animation.json
+    - assets/story1.png
+    - assets/story2.jpg
+    - assets/story3.jpg
+    - assets/story4.jpg
+    - assets/story5.jpg
+    - assets/story6.jpg
+    - assets/profile.png
+    - assets/fantasy.png
+    - assets/smiling.png
+    - assets/planet.png
+    - assets/default_image.jpg
+    - assets/file copy 6.png
+    - assets/freepik__background__53203.png
+    - assets/LuckiestGuy-Regular.ttf
+    - assets/female_avatar_1.png
+    - assets/female_avatar_2.jpg
+    - assets/female_avatar_3.jpg
+    - assets/female_avatar_4.jpg
+    - assets/male_avatar_1.png
+    - assets/male_avatar_2.png
+    - assets/male_avatar_3.png
+    - assets/male_avatar_4.png
+    - assets/file copy 7.png
+    - assets/Gill Sans Infant Std Regular.otf
+    - assets/class_code_icon.png
+    - assets/email_icon.png
+    - assets/dashboard_Banner.png
+    - assets/students.png
+    - assets/classroom.png
+    - assets/classroom2.png
+    - assets/male_icon.jpeg
+    - assets/female_icon.jpeg
+    - assets/assignments.jpg
+    - assets/practice.jpg
+    - assets/check_mark.png
+    - assets/top left.jpeg
+    - assets/bottom left.jpeg
+    - assets/practice button.jpeg
+    - assets/assignments button.jpeg
+    - assets/stories_due_default_question_mark.png
+    - assets/logo_loading.gif
+    - assets/greyed_logo.png
+
+
+  # Define your fonts
+  fonts:
+    - family: GillSansInfant
+      fonts:
+        - asset: assets/Gill Sans Infant Std Regular.otf
+
+    - family: LuckiestGuy
+      fonts:
+        - asset: assets/LuckiestGuy-Regular.ttf
+  # An image asset can refer to one or more resolution-specific "variants", see
+  # https://flutter.dev/to/resolution-aware-images
+
+  # For details regarding adding assets from package dependencies, see
+  # https://flutter.dev/to/asset-from-package
+
+  # To add custom fonts to your application, add a fonts section here,
+  # in this "flutter" section. Each entry in this list should have a
+  # "family" key with the font family name, and a "fonts" key with a
+  # list giving the asset and other descriptors for the font. For
+  # example:
+  # fonts:
+  #   - family: Schyler
+  #     fonts:
+  #       - asset: fonts/Schyler-Regular.ttf
+  #       - asset: fonts/Schyler-Italic.ttf
+  #         style: italic
+  #   - family: Trajan Pro
+  #     fonts:
+  #       - asset: fonts/TrajanPro.ttf
+  #       - asset: fonts/TrajanPro_Bold.ttf
+  #         weight: 700
+  #
+  # For details regarding fonts from package dependencies,
+  # see https://flutter.dev/to/font-from-package
+
+
